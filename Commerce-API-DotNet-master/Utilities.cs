@@ -76,31 +76,6 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 		}
 
 		/// <summary>
-		/// Prompts the user to edit the config paramerters in app.config
-		/// </summary>
-		public static void ValidateConfiguration(string microsoftId, string defaultDomain, string appId, string key, string ExistingCustomerMicrosoftId)
-		{
-			if (microsoftId.Equals("Your Organization Microsoft Id") || defaultDomain.Equals("Your default domain, something like contoso.onmicrosoft.com") ||
-					appId.Equals("Your App Id") || key.Equals("Your key goes here") || ExistingCustomerMicrosoftId.Equals("Your existing customer ID"))
-			{
-				Console.Write(
-						"\nHave you updated the app.config, with the settings from https://partnercenter.microsoft.com (y/n)? ");
-				string response = Console.ReadLine().Trim().ToUpperInvariant();
-				if (response != "Y" && response != "YES")
-				{
-					Console.ForegroundColor = ConsoleColor.Yellow;
-					Console.WriteLine(
-							"\nUpdate AppId, Key, MicrosoftId, DefaultDomain in the app.config and run the app again");
-
-					Console.ResetColor();
-					Console.Write("\n\n\nHit enter to exit the app now");
-					Console.ReadLine();
-					return;
-				}
-			}
-		}
-
-		/// <summary>
 		/// Prompts the user to enter a valid number for scenario in app.config
 		/// </summary>
 		public static void PromptForScenario()

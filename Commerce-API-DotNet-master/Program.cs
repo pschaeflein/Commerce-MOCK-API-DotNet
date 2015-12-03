@@ -34,9 +34,6 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 
 			string ExistingCustomerMicrosoftId = ConfigurationManager.AppSettings["ExistingCustomerMicrosoftId"];
 
-			// Prompts the user to edit the config parametres if its not already done.
-			Utilities.ValidateConfiguration(microsoftId, defaultDomain, appId, key, ExistingCustomerMicrosoftId);
-
 			// Gets the scenario from app config. If an invalid entry is found, prompts the user to enter a valid value.
 			string scenario = ConfigurationManager.AppSettings["scenario"];
 			int intScenario;
