@@ -40,5 +40,16 @@ namespace MSCorp.CrestMockWebApi.Services
 			}
 		}
 
+		public static void LogError(Exception ex)
+		{
+			using (StreamWriter w = File.AppendText(LogFileName))
+			{
+				w.Write("\r\nError : ");
+				w.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
+						DateTime.Now.ToLongDateString());
+				w.WriteLine(ex.ToString());
+				w.WriteLine("----------------------------------------");
+			}
+		}
 	}
 }

@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -194,7 +195,6 @@
     <Compile Include="Repository\InMemoryTokenRepository.cs" />
     <Compile Include="Services\FileLoggingService.cs" />
     <Compile Include="Services\JsonObjectExtractorService.cs" />
-    <Compile Include="Services\TableLoggingService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validators\CountryPhoneNumberValidatorAttribute.cs" />
     <Compile Include="Validators\CountryValidatorAttribute.cs" />

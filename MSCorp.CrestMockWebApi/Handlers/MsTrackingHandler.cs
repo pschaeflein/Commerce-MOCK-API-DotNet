@@ -50,15 +50,6 @@ namespace MSCorp.CrestMockWebApi.Handlers
 		private static void TrackRequest(HttpRequestMessage request, string trackingId, string correlationId, string sessionId)
 		{
 			FileLoggingService.LogInformational(request, trackingId, correlationId, sessionId);
-
-			/* TableLoggingService.LogInformational(new TrackingLogEntity()
-			 {
-					 TrackingId = trackingId,
-					 CorrelationId = correlationId,
-					 SessionId = sessionId,
-					 MessageBody = request.Content.ReadAsStringAsync().Result,
-					 Uri = request.RequestUri.AbsoluteUri
-			 });*/
 		}
 	}
 }
