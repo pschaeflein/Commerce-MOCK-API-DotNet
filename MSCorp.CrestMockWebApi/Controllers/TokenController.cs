@@ -21,7 +21,7 @@ namespace MSCorp.CrestMockWebApi.Controllers
 
 		[HttpPost]
 		[Route("my-org/tokens")]
-		public TokenReponseData GetSaleAgentToken()
+		public TokenReponseData GetSalesAgentToken()
 		{
 			var ADtoken = Request.Headers.Authorization.Parameter;
 			return _repository.GetToken(ADtoken);
