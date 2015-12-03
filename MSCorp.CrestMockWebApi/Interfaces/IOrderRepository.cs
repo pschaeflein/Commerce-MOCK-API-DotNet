@@ -6,7 +6,6 @@
 
 using System;
 using MSCorp.CrestMockWebApi.Models.Orders;
-using System.Collections.Generic;
 
 namespace MSCorp.CrestMockWebApi.Interfaces
 {
@@ -14,6 +13,5 @@ namespace MSCorp.CrestMockWebApi.Interfaces
 	{
 		PlaceOrderResponseData PlaceOrder();
 		Order GetOrderById(Guid id);
-		List<Order> GetOrders();
 	}
 }

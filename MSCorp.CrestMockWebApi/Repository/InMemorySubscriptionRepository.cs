@@ -19,12 +19,7 @@ namespace MSCorp.CrestMockWebApi.Repository
 
 		public InMemorySubscriptionRepository()
 		{
-			_testDataList = GetExampleSubscriptionDataList();
-		}
-
-		public List<SingleSubscriptionResponseData> GetMultipleSubscriptionResponseData()
-		{
-			return GetExampleSubscriptionDataList();
+            _testDataList = GetExampleSubsriptionDataList();
 		}
 
 		public SingleSubscriptionResponseData GetSingleSubscriptionResponseData(SingleSubscriptionRequestData singleSubscriptionRequestData)
@@ -32,7 +27,7 @@ namespace MSCorp.CrestMockWebApi.Repository
 			return _testDataList.Find(i => i.id == singleSubscriptionRequestData.SubscriptionId.ToString());
 		}
 
-		private static List<SingleSubscriptionResponseData> GetExampleSubscriptionDataList()
+        private static List<SingleSubscriptionResponseData> GetExampleSubsriptionDataList()
 		{
 			return JsonObjectExtractorService.ExtractMultipleJsonObjectsFromFile<SingleSubscriptionResponseData>
 					(ResourcePathConstant.GetSubscriptionResponseDataPath);

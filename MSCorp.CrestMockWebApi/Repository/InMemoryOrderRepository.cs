@@ -34,11 +34,6 @@ namespace MSCorp.CrestMockWebApi.Repository
 			return _orderTestData.Find(i => i.id == id.ToString());
 		}
 
-		public List<Order> GetOrders()
-		{
-			return GetExampleOrderData();
-		}
-
 		private static PlaceOrderResponseData GetExamplePlaceOrderResponseData()
 		{
 			return JsonObjectExtractorService.ExtractJsonObjectFromFile<PlaceOrderResponseData>
