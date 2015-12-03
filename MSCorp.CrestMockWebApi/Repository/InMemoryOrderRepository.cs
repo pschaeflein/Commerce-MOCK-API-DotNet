@@ -1,6 +1,11 @@
-﻿using System;
+﻿/********************************************************
+*                                                        *
+*   Copyright (C) Microsoft. All rights reserved.        *
+*                                                        *
+*********************************************************/
+
+using System;
 using System.Collections.Generic;
-using Microsoft.Data.OData.Query.SemanticAst;
 using MSCorp.CrestMockWebApi.Constants;
 using MSCorp.CrestMockWebApi.Interfaces;
 using MSCorp.CrestMockWebApi.Models.Orders;

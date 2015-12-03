@@ -31,9 +31,9 @@
       "object_type":"Customer"
    },
    "profile":{  
-      "email":"pandrew@microsoft.com",
-      "first_name":"Paul",
-      "last_name":"Andrew",
+      "email":"sample@example.com",
+      "first_name":"Sample",
+      "last_name":"Customer",
       "company_name":"testtest_paul43",
       "language":"en",
       "culture":"en-US",
@@ -50,8 +50,8 @@
          "address_line2":"",
          "address_line3":"",
          "postal_code":"98052",
-         "first_name":"Paul",
-         "last_name":"Andrew",
+         "first_name":"Sample",
+         "last_name":"Customer",
          "phone_number":"4255551234",
          "links":{  
             "self":{  

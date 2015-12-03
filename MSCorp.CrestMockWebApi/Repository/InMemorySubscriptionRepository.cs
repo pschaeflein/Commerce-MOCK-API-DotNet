@@ -1,4 +1,9 @@
-﻿using System;
+﻿/********************************************************
+*                                                        *
+*   Copyright (C) Microsoft. All rights reserved.        *
+*                                                        *
+*********************************************************/
+
 using System.Collections.Generic;
 using MSCorp.CrestMockWebApi.Constants;
 using MSCorp.CrestMockWebApi.Interfaces;

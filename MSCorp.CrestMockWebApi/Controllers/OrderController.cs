@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************************
+*                                                        *
+*   Copyright (C) Microsoft. All rights reserved.        *
+*                                                        *
+*********************************************************/
+
+using System;
 using System.Web.Http;
 using MSCorp.CrestMockWebApi.Interfaces;
 using MSCorp.CrestMockWebApi.Models.Orders;

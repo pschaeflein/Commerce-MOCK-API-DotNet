@@ -1,4 +1,10 @@
-﻿using MSCorp.CrestMockWebApi.Models.Subscription;
+﻿/********************************************************
+*                                                        *
+*   Copyright (C) Microsoft. All rights reserved.        *
+*                                                        *
+*********************************************************/
+
+using MSCorp.CrestMockWebApi.Models.Subscription;
 using System.Collections.Generic;
 
 namespace MSCorp.CrestMockWebApi.Interfaces
