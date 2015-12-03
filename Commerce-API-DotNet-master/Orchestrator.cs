@@ -36,7 +36,7 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 		}
 
 		/// <summary>
-		/// Get all subscriptions placed by the reseller for the customer
+		/// Get subscriptions with the specified id
 		/// </summary>
 		/// <param name="defaultDomain">default domain of the reseller</param>
 		/// <param name="appId">appid that is registered for this application in Partner Center</param>
@@ -44,8 +44,8 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 		/// <param name="customerMicrosoftId">Microsoft Id of the customer</param>
 		/// <param name="resellerMicrosoftId">Microsoft Id of the reseller</param>
 		/// <returns>object that contains all of the subscriptions</returns>
-		public static dynamic GetSubscriptions(string defaultDomain, string appId, string key,
-				string customerMicrosoftId, string resellerMicrosoftId)
+		public static dynamic GetSubscriptionById(string defaultDomain, string appId, string key,
+				string subscriptionId, string resellerMicrosoftId)
 		{
 			// Get Active Directory token first
 			AuthorizationToken adAuthorizationToken = Reseller.GetAD_Token(defaultDomain, appId, key);
@@ -56,11 +56,7 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 			// Get the Reseller Cid, you can cache this value
 			string resellerCid = Reseller.GetCid(resellerMicrosoftId, saAuthorizationToken.AccessToken);
 
-			// You can cache this value too
-			var customerCid = Customer.GetCustomerCid(customerMicrosoftId, resellerMicrosoftId,
-					saAuthorizationToken.AccessToken);
-
-			return Subscription.GetSubscriptions(customerCid, resellerCid, saAuthorizationToken.AccessToken);
+			return Subscription.GetSubscriptionById(subscriptionId, resellerCid, saAuthorizationToken.AccessToken);
 		}
 
 		/// <summary>
@@ -72,7 +68,7 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 		/// <param name="customerMicrosoftId">Microsoft Id of the customer</param>
 		/// <param name="resellerMicrosoftId">Microsoft Id of the reseller</param>
 		/// <returns>object that contains orders</returns>
-		public static dynamic GetOrders(string defaultDomain, string appId, string key, string customerMicrosoftId,
+		public static dynamic GetOrderById(string defaultDomain, string appId, string key, string orderId,
 				string resellerMicrosoftId)
 		{
 			// Get Active Directory token first
@@ -84,11 +80,7 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 			// Get the Reseller Cid, you can cache this value
 			string resellerCid = Reseller.GetCid(resellerMicrosoftId, saAuthorizationToken.AccessToken);
 
-			// You can cache this value too
-			var customerCid = Customer.GetCustomerCid(customerMicrosoftId, resellerMicrosoftId,
-					saAuthorizationToken.AccessToken);
-
-			return Order.GetOrders(customerCid, resellerCid, saAuthorizationToken.AccessToken);
+			return Order.GetOrderById(resellerCid, orderId, saAuthorizationToken.AccessToken);
 		}
 
 		/// <summary>

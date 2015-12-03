@@ -33,6 +33,8 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 			string key = ConfigurationManager.AppSettings["Key"];
 
 			string ExistingCustomerMicrosoftId = ConfigurationManager.AppSettings["ExistingCustomerMicrosoftId"];
+			string ExistingSubscriptionId = ConfigurationManager.AppSettings["ExistingSubscriptionId"];
+			string ExistingOrderId = ConfigurationManager.AppSettings["ExistingOrderId"];
 
 			// Gets the scenario from app config. If an invalid entry is found, prompts the user to enter a valid value.
 			string scenario = ConfigurationManager.AppSettings["scenario"];
@@ -51,11 +53,11 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 				}
 				if (intScenario == Constants.SCENARIO_TWO || intScenario == Constants.ALL_SCENARIOS)
 				{
-					Orchestrator.GetSubscriptions(defaultDomain, appId, key, ExistingCustomerMicrosoftId, microsoftId);
+					Orchestrator.GetSubscriptionById(defaultDomain, appId, key, ExistingSubscriptionId, microsoftId);
 				}
 				if (intScenario == Constants.SCENARIO_THREE || intScenario == Constants.ALL_SCENARIOS)
 				{
-					Orchestrator.GetOrders(defaultDomain, appId, key, ExistingCustomerMicrosoftId, microsoftId);
+					Orchestrator.GetOrderById(defaultDomain, appId, key, ExistingOrderId, microsoftId);
 				}
 				if (intScenario == Constants.SCENARIO_FOUR || intScenario == Constants.ALL_SCENARIOS)
 				{

@@ -164,16 +164,16 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 		}
 
 		/// <summary>
-		/// This method retrieves all the orders placed for a customer by a reseller
+		/// This method returns the order given the order id
 		/// </summary>
-		/// <param name="customerCid">cid of the customer</param>
 		/// <param name="resellerCid">cid of the reseller</param>
+		/// <param name="orderId">order id</param>
 		/// <param name="sa_Token">sales agent token</param>
-		/// <returns>object that contains orders</returns>
-		public static dynamic GetOrders(string customerCid, string resellerCid, string sa_Token)
+		/// <returns>object that contains order</returns>
+		public static dynamic GetOrderById(string resellerCid, string orderId, string sa_Token)
 		{
-			//var request = (HttpWebRequest)HttpWebRequest.Create(string.Format("https://api.cp.microsoft.com/{0}/orders?recipient_customer_id={1}", resellerCid, customerCid));
-			var request = (HttpWebRequest)HttpWebRequest.Create(string.Format("http://localhost:59080/{0}/orders?recipient_customer_id={1}", resellerCid, customerCid));
+			//var request = (HttpWebRequest)HttpWebRequest.Create(string.Format("https://api.cp.microsoft.com/{0}/orders/{1}", resellerCid, orderId));
+			var request = (HttpWebRequest)HttpWebRequest.Create(string.Format("http://localhost:59080/{0}/orders/{1}", resellerCid, orderId));
 
 			request.Method = "GET";
 			request.Accept = "application/json";
@@ -192,14 +192,10 @@ namespace Microsoft.Partner.CSP.Api.V1.Samples
 				{
 					var responseContent = reader.ReadToEnd();
 					Utilities.PrintWebResponse((HttpWebResponse)response, responseContent);
-					var ordersResponse = Json.Decode(responseContent);
+					var order = Json.Decode(responseContent);
+					PrintOrder(order);
 
-					foreach (var order in ordersResponse.items)
-					{
-						PrintOrder(order);
-					}
-
-					return ordersResponse;
+					return order;
 				}
 			}
 			catch (WebException webException)
