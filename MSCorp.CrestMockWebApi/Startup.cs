@@ -26,33 +26,6 @@ namespace MSCorp.CrestMockWebApi
 		// Invoked once at startup to configure your application.
 		public void Configuration(IAppBuilder builder)
 		{
-
-			//builder.UseWindowsAzureActiveDirectoryBearerAuthentication(
-			//    new WindowsAzureActiveDirectoryBearerAuthenticationOptions
-			//    {
-			//        Tenant = WebConfigurationManager.AppSettings["Tenant"],
-			//        TokenValidationParameters = new TokenValidationParameters
-			//        {
-			//            ValidAudiences = new[] { WebConfigurationManager.AppSettings["Audience"] }
-			//        }
-			//    });
-
-			//todo: need to implement this correctly when verifying SAToken.
-			//builder.UseJwtBearerAuthentication(new JwtBearerAuthenticationOptions()
-			//{
-			//    AllowedAudiences = new  []{"urn:cpsvc:ca:86fd35b9-38a2-413c-a9b1-33bb75f3bd4f"},
-
-			//    TokenValidationParameters = new TokenValidationParameters()
-			//    {
-			//        ValidateLifetime = false,
-			//        ValidateIssuer = false,
-			//        ValidateActor = false,
-			//        ValidateIssuerSigningKey = false,
-
-			//    }
-			//});
-
-
 			HttpConfiguration config = new HttpConfiguration();
 
 			//filters
