@@ -1,0 +1,28 @@
+﻿[
+    {
+        "id": "86fd35b9-38a2-413c-a9b1-33bb75f3bd4f",
+        "identity": {
+            "provider": "AAD",
+            "type": "tenant",
+            "data": {
+                "tid": "86fd35b9-38a2-413c-a9b1-33bb75f3bd4f"
+            }
+        },
+        "is_test": true,
+        "links": {
+            "self": {
+                "href": "customers/86fd35b9-38a2-413c-a9b1-33bb75f3bd4f",
+                "method": "GET"
+            },
+            "profiles": {
+                "href": "86fd35b9-38a2-413c-a9b1-33bb75f3bd4f/profiles",
+                "method": "GET"
+            },
+            "addresses": {
+                "href": "86fd35b9-38a2-413c-a9b1-33bb75f3bd4f/addresses",
+                "method": "GET"
+            }
+        },
+        "object_type": "Customer"
+    }
+]
